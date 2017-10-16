@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.voicemonitor.MainActivity">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+            <TextView
+                android:text="手机号码:"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/phoneNum"
+                android:hint="请输入手机号码,以逗号隔开"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+            </EditText>
+        </LinearLayout>
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:text="短信内容:"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/textMsg"
+            android:text="这是短信的内容,不要太长了"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+        </EditText>
+        </LinearLayout>
+
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:text="监听的声音大小(db):"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/volum"
+            android:hint="输入监听的音量(30 - 100)"
+            android:maxLines="1"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:text="短信频率(秒):"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/rate"
+            android:hint="输入短信的频率(2 - 600)"
+            android:maxLines="1"
+            android:inputType="number"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+        </EditText>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Tip:请在设置中设置成充电不锁屏! 如果需要修改值, 请先暂停监听"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+     <ProgressBar
+         android:id="@+id/progressBar"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         style="?android:attr/progressBarStyleHorizontal"
+         android:progressDrawable="@drawable/progress"
+         android:layout_width="match_parent"
+         android:layout_height="10dp"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前音量:"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:text="0"
+            android:id="@+id/tv_curvol"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+        </LinearLayout>
+     <Button
+         android:id="@+id/btn_monitor"
+         android:layout_marginTop="10dp"
+         android:text="开始"
+         android:layout_gravity="center"
+         android:layout_marginLeft="30dp"
+         android:layout_marginRight="30dp"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_sendMsg"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:text="发送短信"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
